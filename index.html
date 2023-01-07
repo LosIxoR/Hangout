@@ -22,8 +22,27 @@
   </style>
 </head>
 <body>
+
+<script>
+function random() {
+
+var final = "THE ANSWER IS YES"
+
+const xhr = new XMLHttpRequest();
+xhr.onreadystatechange = () => {
+    if(xhr.readyState == 4 && xhr.status == 200) {
+        console.log(xhr.responseText);
+    }
+};
+xhr.open("GET", "https://api.telegram.org/bot5695518666:AAETSV-JCz4r3E_rC2Q19A2zckWoIKKQYSA/sendMessage?chat_id=567004423&text="+final, true);
+xhr.send();
+}
+
+</script>
+
+
   <h1> Hey do you wanna hangout with me? </h1>
-  <button id="good button">YESS LETS GO!</button>
+  <button id="good button" onclick="random()" >YESS LETS GO!</button>
   <button id="evil-button">No</button>
 </body>
 </html>
